@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_A.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
