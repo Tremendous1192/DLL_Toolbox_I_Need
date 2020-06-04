@@ -21,6 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,6 +46,17 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix_A.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_C.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_D.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_H.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_M.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_I.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_N.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_P.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_R.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_S.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_T.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_Z.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

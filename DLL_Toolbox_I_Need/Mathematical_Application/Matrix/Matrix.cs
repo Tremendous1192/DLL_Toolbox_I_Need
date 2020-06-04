@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
+
     public partial class Matrix
     {
     }
+
+
 }
