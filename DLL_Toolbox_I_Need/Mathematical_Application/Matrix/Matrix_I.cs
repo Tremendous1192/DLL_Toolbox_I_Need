@@ -31,7 +31,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             double[,] sweeped = new double[matrix.GetLength(0), matrix.GetLength(1) * 2];
 
 
-            //正則化項を加える(絶対値の最小値の1%とする)
+            //正則化項を加える(絶対値の最小値の1/10000とする)
             double abs_min = Math.Abs(matrix[0, 0]);
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -40,7 +40,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                     abs_min = Math.Min(abs_min, Math.Abs(matrix[i, j]));
                 }
             }
-            double scaling = abs_min * 0.01;
+            double scaling = abs_min / 1000.0 / 1000.0;
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)

@@ -44,6 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_A.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_I.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_K.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_L.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_M.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_P.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_V.cs" />
+    <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression.cs" />
+    <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression_L.cs" />
+    <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression_R.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix_A.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix_C.cs" />
