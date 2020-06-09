@@ -52,6 +52,15 @@
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_M.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_P.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_V.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_0_Constructor.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_1_Input.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_2_Forward_Propagation.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_3_Teaching.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_4_Calculate_Target_Function_and_Delta.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_5_Update.cs" />
+    <Compile Include="Mathematical_Application\IFunction\Gaussian_IFunction.cs" />
+    <Compile Include="Mathematical_Application\IFunction\IFunction.cs" />
     <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression.cs" />
     <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression_L.cs" />
     <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression_R.cs" />
@@ -68,6 +77,23 @@
     <Compile Include="Mathematical_Application\Matrix\Matrix_S.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix_T.cs" />
     <Compile Include="Mathematical_Application\Matrix\Matrix_Z.cs" />
+    <Compile Include="Mathematical_Application\IFunction\SoftMax_IFunction.cs" />
+    <Compile Include="Mathematical_Application\IFunction\Swish_IFunction.cs" />
+    <Compile Include="Mathematical_Application\Matrix\Matrix_L.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Multiclass_Classification_Final_Layer\Multiclass_Classification_Final_Layer.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Multiclass_Classification_Final_Layer\Multiclass_Classification_Final_Layer_Step_0_Constructor.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Multiclass_Classification_Final_Layer\Multiclass_Classification_Final_Layer_Step_1_Input.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Multiclass_Classification_Final_Layer\Multiclass_Classification_Final_Layer_Step_2_Forward_Propagation.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Multiclass_Classification_Final_Layer\Multiclass_Classification_Final_Layer_Step_3_Teaching.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Multiclass_Classification_Final_Layer\Multiclass_Classification_Final_Layer_Step_4_Calculate_Target_Function_and_Delta.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Multiclass_Classification_Final_Layer\Multiclass_Classification_Final_Layer_Step_5_Update.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_0_Constructor.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_1_Input.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_2_Forward_Propagation.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_3_Teaching.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_4_Calculate_Target_Function_and_Delta.cs" />
+    <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_5_Update.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
