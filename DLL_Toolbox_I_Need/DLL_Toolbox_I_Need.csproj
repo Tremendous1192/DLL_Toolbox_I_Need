@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Mathematical_Application\IKernel\Gaussian_Kernel.cs" />
+    <Compile Include="Mathematical_Application\IKernel\IKernel.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_A.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_I.cs" />
@@ -52,6 +55,9 @@
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_M.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_P.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_V.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Half_Normal_Distribution_Polar.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\IRandom_Number.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Log_Normal_Distribution_Polar.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_0_Constructor.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_1_Input.cs" />
@@ -94,6 +100,12 @@
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_3_Teaching.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_4_Calculate_Target_Function_and_Delta.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_5_Update.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution.cs" />
+    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine.cs" />
+    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_I.cs" />
+    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_L.cs" />
+    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_P.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
