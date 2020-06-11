@@ -13,13 +13,15 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 線形回帰 X_T × w ( w : Colmun_Vector )
         /// </summary>
-        /// <param name="row_vector_or_design_matrix"></param>
+        /// <param name="row_vector_or_design_matrix_with_constant_1"></param>
         /// <param name="column_Vector_coefficient_w"></param>
         /// <returns></returns>
-        public static double[,] Regression_Design_Matrix(double[,] row_vector_or_design_matrix, double[,] column_Vector_coefficient_w)
+        public static double[,] Regression_Design_Matrix(double[,] row_vector_or_design_matrix_with_constant_1, double[,] column_Vector_coefficient_w)
         {
-            return Matrix.Multiplication(row_vector_or_design_matrix, column_Vector_coefficient_w);
+            return Matrix.Multiplication(row_vector_or_design_matrix_with_constant_1, column_Vector_coefficient_w);
         }
+
+
 
 
         /// <summary>

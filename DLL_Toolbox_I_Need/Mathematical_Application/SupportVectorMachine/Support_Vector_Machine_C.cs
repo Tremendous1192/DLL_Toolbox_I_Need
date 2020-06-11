@@ -13,26 +13,32 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// Perform row vector identification .
         /// </summary>
         /// <param name="Label_Y"></param>
-        /// <param name="design_Matrix"></param>
+        /// <param name="design_Matrix_without_constant"></param>
         /// <param name="iKernel"></param>
         /// <param name="Inverse_Variance_Covariance_Matrix"></param>
         /// <param name="Coefficient_A"></param>
         /// <param name="row_vector"></param>
         /// <returns></returns>
-        public static double Prediction(double[,] Label_Y, double[,] design_Matrix, IKernel iKernel, double[,] Inverse_Variance_Covariance_Matrix, double[,] Coefficient_A, double[,] row_vector)
+        public static double Classification(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] Inverse_Variance_Covariance_Matrix, double[,] Coefficient_A, double[,] row_vector)
         {
+
+            if (row_vector.GetLength(0) > 1)
+            {
+                throw new FormatException(nameof(row_vector) + "(" + row_vector.GetLength(0) + ")" + " must be 1 .");
+            }
+
             //カーネルのセット
             iKernel.Set_Inverse_Variance_Covariance_Matrix(Inverse_Variance_Covariance_Matrix);
 
 
             //カーネル用の行列
-            double[,] Kernel_Matrix = new double[design_Matrix.GetLength(0), 1];
+            double[,] Kernel_Matrix = new double[design_Matrix_without_constant.GetLength(0), 1];
 
             //カーネルを計算する
             double[,] r_j = new double[1, 1];
-            for (int j = 0; j < design_Matrix.GetLength(0); j++)
+            for (int j = 0; j < design_Matrix_without_constant.GetLength(0); j++)
             {
-                r_j = Matrix.Pick_Up_Row_Vector(design_Matrix, j);
+                r_j = Matrix.Pick_Up_Row_Vector(design_Matrix_without_constant, j);
                 Kernel_Matrix[j, 0] = iKernel.Calculate(row_vector, r_j);
             }
 

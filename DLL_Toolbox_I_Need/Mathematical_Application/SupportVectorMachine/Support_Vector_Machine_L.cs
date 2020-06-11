@@ -13,11 +13,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// Learn coefficient A .
         /// </summary>
         /// <param name="Label_Y"></param>
-        /// <param name="design_Matrix"></param>
+        /// <param name="design_Matrix_without_constant"></param>
         /// <param name="iKernel"></param>
         /// <param name="Inverse_Variance_Covariance_Matrix"></param>
         /// <returns></returns>
-        public static double[,] Learned_Coefficient_A(double[,] Label_Y, double[,] design_Matrix, IKernel iKernel, double[,] Inverse_Variance_Covariance_Matrix)
+        public static double[,] Learned_Coefficient_A(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] Inverse_Variance_Covariance_Matrix)
         {
             //カーネルのセット
             iKernel.Set_Inverse_Variance_Covariance_Matrix(Inverse_Variance_Covariance_Matrix);
@@ -26,7 +26,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             double Hyper_Parameter_C = 1.0;// Math.Min(1.0, 1.0 / design_Matrix.GetLength(0));
 
             //カーネル行列
-            double[,] kernel_Matrix = new double[design_Matrix.GetLength(0), design_Matrix.GetLength(0)];
+            double[,] kernel_Matrix = new double[design_Matrix_without_constant.GetLength(0), design_Matrix_without_constant.GetLength(0)];
 
             //行ベクトル
             double[,] r_j = new double[1, 1];
@@ -34,12 +34,12 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             //カーネルを計算しておく
             double k_jk = 0;
-            for (int j = 0; j < design_Matrix.GetLength(0); j++)
+            for (int j = 0; j < design_Matrix_without_constant.GetLength(0); j++)
             {
-                r_j = Matrix.Pick_Up_Row_Vector(design_Matrix, j);
-                for (int k = j; k < design_Matrix.GetLength(0); k++)
+                r_j = Matrix.Pick_Up_Row_Vector(design_Matrix_without_constant, j);
+                for (int k = j; k < design_Matrix_without_constant.GetLength(0); k++)
                 {
-                    r_k = Matrix.Pick_Up_Row_Vector(design_Matrix, k);
+                    r_k = Matrix.Pick_Up_Row_Vector(design_Matrix_without_constant, k);
 
                     k_jk = iKernel.Calculate(r_j, r_k);
 
@@ -50,7 +50,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
             //係数の初期化
-            double[,] coefficient_Matrix_A = new double[design_Matrix.GetLength(0), 1];
+            double[,] coefficient_Matrix_A = new double[design_Matrix_without_constant.GetLength(0), 1];
             double initial_a = 0.0;// 1.0 / design_Matrix.GetLength(0) / design_Matrix.GetLength(0);
             for (int j = 0; j < coefficient_Matrix_A.GetLength(0); j++)
             { coefficient_Matrix_A[j, 0] = initial_a; }
@@ -66,14 +66,14 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             //学習
             //2点のデータを選択する
-            for (int j = 0; j < design_Matrix.GetLength(0); j++)
+            for (int j = 0; j < design_Matrix_without_constant.GetLength(0); j++)
             {
                 //計画行列からj行目のベクトルを取り出す
-                r_j = Matrix.Pick_Up_Row_Vector(design_Matrix, j);
-                for (int k = j + 1; k < design_Matrix.GetLength(0); k++)
+                r_j = Matrix.Pick_Up_Row_Vector(design_Matrix_without_constant, j);
+                for (int k = j + 1; k < design_Matrix_without_constant.GetLength(0); k++)
                 {
                     //計画行列からk行目のベクトルを取り出す
-                    r_k = Matrix.Pick_Up_Row_Vector(design_Matrix, k);
+                    r_k = Matrix.Pick_Up_Row_Vector(design_Matrix_without_constant, k);
 
                     //ベクトルr_j r_kの予測計算を行う
                     predict_j = 0;

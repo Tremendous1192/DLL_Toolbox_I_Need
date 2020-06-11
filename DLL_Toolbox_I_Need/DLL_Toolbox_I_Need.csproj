@@ -103,9 +103,9 @@
     <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine.cs" />
-    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_I.cs" />
+    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_C2.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_L.cs" />
-    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_P.cs" />
+    <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_C.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
