@@ -44,6 +44,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_1dim.cs" />
+    <Compile Include="Data_Processing_Application\Text_Processor\Text_Processor.cs" />
+    <Compile Include="Data_Processing_Application\Text_Processor\Text_Processor_G.cs" />
+    <Compile Include="Data_Processing_Application\Text_Processor\Text_Processor_R.cs" />
+    <Compile Include="Data_Processing_Application\Text_Processor\Text_Processor_C.cs" />
+    <Compile Include="Data_Processing_Application\Text_Processor\Text_Processor_W_Add.cs" />
+    <Compile Include="Data_Processing_Application\Text_Processor\Text_Processor_W_Re.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_2dim.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_3dim.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_4dim.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_decrease_dimension.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_increase_dimension.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_scalar.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Combine.cs" />
+    <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Disassemble.cs" />
     <Compile Include="Mathematical_Application\IKernel\Gaussian_Kernel.cs" />
     <Compile Include="Mathematical_Application\IKernel\IKernel.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar.cs" />
