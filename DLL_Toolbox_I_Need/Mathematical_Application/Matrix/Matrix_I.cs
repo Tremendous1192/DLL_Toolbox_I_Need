@@ -82,16 +82,17 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
             //戻り値は、matrix.GetLength(1)列目以降の行列
+            double[,] result = new double[matrix.GetLength(0), matrix.GetLength(1)];
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = sweeped[i, j + matrix.GetLength(1)];
+                   result[i, j] = sweeped[i, j + matrix.GetLength(1)];
                 }
             }
 
 
-            return matrix;
+            return result;
         }
 
 

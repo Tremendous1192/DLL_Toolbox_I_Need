@@ -15,11 +15,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <param name="Label_Y"></param>
         /// <param name="design_Matrix_without_constant"></param>
         /// <param name="iKernel"></param>
-        /// <param name="Inverse_Variance_Covariance_Matrix"></param>
+        /// <param name="variance_Covariance_Matrix"></param>
         /// <param name="Coefficient_A"></param>
         /// <param name="row_vector"></param>
         /// <returns></returns>
-        public static double Classification(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] Inverse_Variance_Covariance_Matrix, double[,] Coefficient_A, double[,] row_vector)
+        public static double Classification(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] variance_Covariance_Matrix, double[,] Coefficient_A, double[,] row_vector)
         {
 
             if (row_vector.GetLength(0) > 1)
@@ -28,7 +28,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             }
 
             //カーネルのセット
-            iKernel.Set_Inverse_Variance_Covariance_Matrix(Inverse_Variance_Covariance_Matrix);
+            iKernel.Set_Variance_Covariance_Matrix(variance_Covariance_Matrix);
 
 
             //カーネル用の行列

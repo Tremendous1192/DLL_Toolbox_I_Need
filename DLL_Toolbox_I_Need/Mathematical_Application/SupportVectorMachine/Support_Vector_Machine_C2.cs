@@ -15,16 +15,16 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <param name="Label_Y"></param>
         /// <param name="design_Matrix_without_constant"></param>
         /// <param name="iKernel"></param>
-        /// <param name="Inverse_Variance_Covariance_Matrix"></param>
+        /// <param name="variance_Covariance_Matrix"></param>
         /// <param name="Coefficient_A"></param>
         /// <param name="design_Matrix_for_Classification"></param>
         /// <returns></returns>
-        public static double[,] Classification_Design_Matrix(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] Inverse_Variance_Covariance_Matrix, double[,] Coefficient_A, double[,] design_Matrix_for_Classification)
+        public static double[,] Classification_Design_Matrix(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] variance_Covariance_Matrix, double[,] Coefficient_A, double[,] design_Matrix_for_Classification)
         {
-            double[,] inference = new double[design_Matrix_for_Classification.GetLength(0), 1];
+            double[,] classified = new double[design_Matrix_for_Classification.GetLength(0), 1];
 
             //カーネルのセット
-            iKernel.Set_Inverse_Variance_Covariance_Matrix(Inverse_Variance_Covariance_Matrix);
+            iKernel.Set_Variance_Covariance_Matrix(variance_Covariance_Matrix);
 
 
             //カーネル用の行列
@@ -32,7 +32,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             //識別したい計画行列を1行ずつ計算する
             double[,] row_vector;
-            for (int n = 0; n < inference.GetLength(0); n++)
+            for (int n = 0; n < classified.GetLength(0); n++)
             {
                 row_vector = Matrix.Pick_Up_Row_Vector(design_Matrix_for_Classification, n);
                 //カーネルを計算する
@@ -56,12 +56,12 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                     sum += h;
                 }
 
-                inference[n, 0] = sum;
+                classified[n, 0] = sum;
             }
 
 
 
-            return inference;
+            return classified;
         }
 
     }

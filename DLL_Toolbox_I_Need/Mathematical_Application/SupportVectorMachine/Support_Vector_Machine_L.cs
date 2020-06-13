@@ -15,12 +15,12 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <param name="Label_Y"></param>
         /// <param name="design_Matrix_without_constant"></param>
         /// <param name="iKernel"></param>
-        /// <param name="Inverse_Variance_Covariance_Matrix"></param>
+        /// <param name="variance_Covariance_Matrix"></param>
         /// <returns></returns>
-        public static double[,] Learned_Coefficient_A(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] Inverse_Variance_Covariance_Matrix)
+        public static double[,] Learned_Coefficient_A(double[,] Label_Y, double[,] design_Matrix_without_constant, IKernel iKernel, double[,] variance_Covariance_Matrix)
         {
             //カーネルのセット
-            iKernel.Set_Inverse_Variance_Covariance_Matrix(Inverse_Variance_Covariance_Matrix);
+            iKernel.Set_Variance_Covariance_Matrix(variance_Covariance_Matrix);
 
             //係数の最大値
             double Hyper_Parameter_C = 1.0;// Math.Min(1.0, 1.0 / design_Matrix.GetLength(0));

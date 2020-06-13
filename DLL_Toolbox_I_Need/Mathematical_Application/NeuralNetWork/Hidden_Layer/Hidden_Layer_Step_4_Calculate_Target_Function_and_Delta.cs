@@ -19,6 +19,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             change_w = Matrix.Multiplication(delta, Get_input_Transpose());
 
         }
+
     }
 
 }

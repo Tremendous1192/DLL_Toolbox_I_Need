@@ -28,7 +28,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             double[,] X_T_cross_X = Matrix.Multiplication(X_T, design_Matrix_with_constant_1);
 
 
-            double alpha = 1.0 / 1000.0;
+            double alpha = 1.0;
             foreach (double d in design_Matrix_with_constant_1) { alpha = Math.Min(alpha, Math.Abs(d)); }
             alpha /= 1000.0;
             alpha /= 1000.0;

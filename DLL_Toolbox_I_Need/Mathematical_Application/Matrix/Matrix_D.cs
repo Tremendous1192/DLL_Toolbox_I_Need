@@ -31,11 +31,13 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 }
             }
             double scaling = abs_min / 1000.0 / 1000.0;
+
+            double[,] calculated = new double[matrix.GetLength(0), matrix.GetLength(1)];
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] += scaling;
+                    calculated[i,j]= matrix[i, j] + scaling;
                 }
             }
 
@@ -49,11 +51,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 //要素[ i , i ] の成分が 1 になるように、　i 行目の値を除算する
-                var this_low = matrix[i, i];
+                var this_low = calculated[i, i];
                 lower *= matrix[i, i];
                 for (int j = i; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] /= this_low;
+                    calculated[i, j] /= this_low;
                 }
 
                 // i2 行目の成分に関して、i列目の値が 0になるように、各列の値を減算する
@@ -65,7 +67,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                         double this_subtracter = matrix[i2, i];
                         for (int j = i; j < matrix.GetLength(1); j++)
                         {
-                            matrix[i2, j] -= this_subtracter * matrix[i, j];
+                            calculated[i2, j] -= this_subtracter * calculated[i, j];
                         }
                     }
                 }
@@ -73,7 +75,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                upper *= matrix[i, i];
+                upper *= calculated[i, i];
             }
 
 
