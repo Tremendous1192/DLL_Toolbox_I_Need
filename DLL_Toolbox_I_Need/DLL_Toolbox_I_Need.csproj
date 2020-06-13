@@ -118,6 +118,14 @@
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_5_Update.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics_C.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics_M.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics_L.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics_Max_Min.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics_S.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics_U.cs" />
+    <Compile Include="Mathematical_Application\Statistics\Statistics_V.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_C2.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_L.cs" />
