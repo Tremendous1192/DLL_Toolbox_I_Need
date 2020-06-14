@@ -19,7 +19,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         {
             double[,] result = new double[matrix.GetLength(0), matrix.GetLength(1)];
 
-            //0割にならないように、補正値を加える(絶対値の最小値の1/1,000,000とする)
+            //0割にならないように、補正値を加える(絶対値の最小値の1/1,000,000,000とする)
             double abs_min = Math.Max(1.0 / 1000.0, Math.Abs(matrix[0, 0]));
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -32,7 +32,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                     }
                 }
             }
-            double scaling = abs_min / 1000.0 / 1000.0;
+            double scaling = abs_min / 1000.0 / 1000.0 / 1000.0;
             
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
