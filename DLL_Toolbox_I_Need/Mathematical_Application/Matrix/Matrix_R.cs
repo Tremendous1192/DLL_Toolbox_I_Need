@@ -32,7 +32,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                     }
                 }
             }
-            double scaling = abs_min / 1000.0 / 1000.0 / 1000.0;
+            double scaling = abs_min / 1000.0 / 1000.0 / 1000.0 / 1000.0;
             
             for (int i = 0; i < matrix.GetLength(0); i++)
             {

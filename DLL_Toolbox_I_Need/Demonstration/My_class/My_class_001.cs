@@ -23,10 +23,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
                 for (int k = 0; k < matrix_A.GetLength(1); k++)
                 {
                     matrix_A[j, k] = j + k + 1;
-                    Console.Write(matrix_A[j, k] + " ");
                 }
-                Console.WriteLine("");
             }
+            this.Show_Matrix_Element(matrix_A);
+
 
             Console.WriteLine("\n行列 B");
             double[,] matrix_B = new double[2, 3];
@@ -35,10 +35,22 @@ namespace DLL_Toolbox_I_Need.Demonstration
                 for (int k = 0; k < matrix_B.GetLength(1); k++)
                 {
                     matrix_B[j, k] = 2 * j + k;
-                    Console.Write(matrix_B[j, k] + " ");
                 }
-                Console.WriteLine("");
             }
+            this.Show_Matrix_Element(matrix_B);
+
+
+            Console.WriteLine("\n行列 C");
+            double[,] matrix_C = new double[3, 1];
+            for (int j = 0; j < matrix_C.GetLength(0); j++)
+            {
+                for (int k = 0; k < matrix_C.GetLength(1); k++)
+                {
+                    matrix_C[j, k] = 1 + j * 2;
+                }
+            }
+            this.Show_Matrix_Element(matrix_C);
+
             Console.ReadKey();
 
 
@@ -99,14 +111,6 @@ namespace DLL_Toolbox_I_Need.Demonstration
             this.Show_Matrix_Element(matrix_A);
 
             Console.WriteLine("\n行列 C");
-            double[,] matrix_C = new double[3, 1];
-            for (int j = 0; j < matrix_C.GetLength(0); j++)
-            {
-                for (int k = 0; k < matrix_C.GetLength(1); k++)
-                {
-                    matrix_C[j, k] = 1 + j * 2;
-                }
-            }
             this.Show_Matrix_Element(matrix_C);
 
             //Matrix_M.cs

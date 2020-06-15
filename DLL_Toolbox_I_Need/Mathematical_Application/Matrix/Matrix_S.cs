@@ -55,7 +55,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             {
                 throw new FormatException("sub-Matrix column " + columnCount + " must be equal or higer than 1 ");
             }
-            else if (columnIndex + columnCount >= matrix.GetLength(1))
+            else if (columnIndex + columnCount - 1 >= matrix.GetLength(1))
             {
                 throw new FormatException("sumation of base and sub column " + columnIndex + " + " + columnCount + " must be less than matrix colmun " + matrix.GetLength(1));
             }
@@ -72,7 +72,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             {
                 throw new FormatException("sub-Matrix row " + rowCount + " must be equal or higer than 1 ");
             }
-            else if (rowIndex + rowCount >= matrix.GetLength(0))
+            else if (rowIndex + rowCount - 1 >= matrix.GetLength(0))
             {
                 throw new FormatException("sumation of base and sub row " + rowIndex + " + " + rowCount + " must be less than matrix row " + matrix.GetLength(0));
             }
