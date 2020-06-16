@@ -11,7 +11,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
         /// <summary>
-        /// ベクトルの大きさの最大値.
+        /// ユークリッドノルムL2の最大値.
         /// Maximum vector magnitude .
         /// </summary>
         /// <param name="design_matrix"></param>
@@ -37,7 +37,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         }
 
         /// <summary>
-        /// ベクトルの大きさの最大値の要素番号 .
+        /// ユークリッドノルムL2の最大値の要素番号 .
         /// Element number of maximum vector size .
         /// </summary>
         /// <param name="design_matrix"></param>
@@ -69,7 +69,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
         /// <summary>
-        /// ベクトルの大きさの最小値 .
+        /// ユークリッドノルムL2の最小値 .
         /// Minimum vector magnitude .
         /// </summary>
         /// <param name="design_matrix"></param>
@@ -96,7 +96,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
         /// <summary>
-        /// ベクトルの大きさの最小値の要素番号 .
+        /// ユークリッドノルムL2の最小値の要素番号 .
         /// lement number of the minimum vector size
         /// </summary>
         /// <param name="design_matrix"></param>

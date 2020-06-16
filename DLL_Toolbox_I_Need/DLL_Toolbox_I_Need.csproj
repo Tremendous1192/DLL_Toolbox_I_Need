@@ -63,6 +63,10 @@
     <Compile Include="Demonstration\My_class\My_class.cs" />
     <Compile Include="Demonstration\My_class\My_class_001.cs" />
     <Compile Include="Demonstration\My_class\My_class_002.cs" />
+    <Compile Include="Demonstration\My_class\My_class_003.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_N.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_C.cs" />
+    <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_S.cs" />
     <Compile Include="Mathematical_Application\IKernel\Gaussian_Kernel.cs" />
     <Compile Include="Mathematical_Application\IKernel\IKernel.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar.cs" />

@@ -91,6 +91,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 }
             }
 
+
             return variance_Covariance_Matrix;
 
         }

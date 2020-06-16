@@ -15,20 +15,20 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// </summary>
         /// <param name="design_matrix"></param>
         /// <param name="K_fold"></param>
-        /// <param name="number"></param>
+        /// <param name="ordinal_number"></param>
         /// <param name="test_data_design_matrix"></param>
         /// <param name="training_data_design_matrix"></param>
         public static void Prepare_k_fold_cross_validation
-            (double[,] design_matrix, int K_fold, int number, ref double[,] test_data_design_matrix, ref double[,] training_data_design_matrix)
+            (double[,] design_matrix, int K_fold, int ordinal_number, ref double[,] test_data_design_matrix, ref double[,] training_data_design_matrix)
         {
 
             int k_fold_modified = Math.Min(Math.Max(K_fold, 2), design_matrix.GetLength(0));
-            int number_modified = Math.Min(Math.Max(number, 0), k_fold_modified - 1);
+            int ordinal_number_modified = Math.Min(Math.Max(ordinal_number, 0), k_fold_modified - 1);
             int group_quantity = design_matrix.GetLength(0) / k_fold_modified;
 
 
-            int initial_group_k = number_modified * group_quantity;
-            int end_gropu_k = Math.Min((number_modified + 1) * group_quantity - 1, design_matrix.GetLength(0) - 1);
+            int initial_group_k = ordinal_number_modified * group_quantity;
+            int end_gropu_k = Math.Min((ordinal_number_modified + 1) * group_quantity - 1, design_matrix.GetLength(0) - 1);
             group_quantity = end_gropu_k - initial_group_k + 1;
 
 

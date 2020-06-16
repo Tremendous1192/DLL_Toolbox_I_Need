@@ -87,9 +87,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                   result[i, j] = sweeped[i, j + matrix.GetLength(1)];
+                    result[i, j] = sweeped[i, j + matrix.GetLength(1)];
                 }
             }
+
+
 
 
             return result;
