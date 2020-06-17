@@ -9,15 +9,15 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
     public partial class Liner_Regression
     {
 
-
         /// <summary>
         /// 線形回帰 X_T × w ( w : Colmun_Vector )
         /// </summary>
-        /// <param name="row_vector_or_design_matrix_with_constant_1"></param>
+        /// <param name="row_vector_or_design_matrix_without_constant"></param>
         /// <param name="column_Vector_coefficient_w"></param>
         /// <returns></returns>
-        public static double[,] Regression_Design_Matrix(double[,] row_vector_or_design_matrix_with_constant_1, double[,] column_Vector_coefficient_w)
+        public static double[,] Regression_Design_Matrix(double[,] row_vector_or_design_matrix_without_constant, double[,] column_Vector_coefficient_w)
         {
+            double[,] row_vector_or_design_matrix_with_constant_1 = Liner_Regression.Add_Constant_1(row_vector_or_design_matrix_without_constant);
             return Matrix.Multiplication(row_vector_or_design_matrix_with_constant_1, column_Vector_coefficient_w);
         }
 
@@ -27,16 +27,19 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// Ridge回帰のパラメータ学習
         /// </summary>
-        /// <param name="design_matrix_with_constant_1"></param>
+        /// <param name="design_matrix_without_constant"></param>
         /// <param name="target_y"></param>
         /// <param name="alpha"></param>
         /// <returns></returns>
-        public static double[,] Ridge_Learning_parameter_w_column_vector(double[,] design_matrix_with_constant_1, double[,] target_y,double alpha)
+        public static double[,] Ridge_Learning_parameter_w_column_vector(double[,] design_matrix_without_constant, double[,] target_y,double alpha)
         {
-            if (design_matrix_with_constant_1.GetLength(0) - target_y.GetLength(0) != 0)
+            if (design_matrix_without_constant.GetLength(0) - target_y.GetLength(0) != 0)
             {
-                throw new FormatException(nameof(design_matrix_with_constant_1) + "の行" + design_matrix_with_constant_1.GetLength(0) + "と、" + nameof(target_y) + "の行" + target_y.GetLength(0) + "が異なります。");
+                throw new FormatException(nameof(design_matrix_without_constant) + "の行" + design_matrix_without_constant.GetLength(0) + "と、" + nameof(target_y) + "の行" + target_y.GetLength(0) + "が異なります。");
             }
+
+            double[,] design_matrix_with_constant_1 = Liner_Regression.Add_Constant_1(design_matrix_without_constant);
+
 
             double[,] X_T = Matrix.Transposed_Matrix(design_matrix_with_constant_1);
             double[,] X_T_cross_X = Matrix.Multiplication(X_T, design_matrix_with_constant_1);

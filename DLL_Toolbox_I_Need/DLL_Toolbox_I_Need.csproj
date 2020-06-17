@@ -81,6 +81,7 @@
     <Compile Include="Mathematical_Application\IRandom_Number\Half_Normal_Distribution_Polar.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\IRandom_Number.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Log_Normal_Distribution_Polar.cs" />
+    <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression_A.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_0_Constructor.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_1_Input.cs" />
