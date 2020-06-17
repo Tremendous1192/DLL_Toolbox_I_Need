@@ -94,7 +94,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 //( 要素数 - 1 )で割る
                 Standard_Error[0, k] /= design_Matrix.GetLength(0) - 1;
 
-                //平方根を取る
+                //要素数で割って、平方根を取る
                 Standard_Error[0, k] = Math.Sqrt(Standard_Error[0, k]/ design_Matrix.GetLength(0));
             }
 

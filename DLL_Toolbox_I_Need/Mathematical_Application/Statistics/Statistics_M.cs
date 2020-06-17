@@ -23,7 +23,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 {
                     mean[0, j] += design_matrix[i, j];
                 }
-                mean[0, j] /= design_matrix.GetLength(1);
+                mean[0, j] /= design_matrix.GetLength(0);
             }
 
             return mean;
