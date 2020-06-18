@@ -67,6 +67,7 @@
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_N.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_C.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_S.cs" />
+    <Compile Include="Mathematical_Application\IFunction\Hyperbolic_Tangent_IFunction.cs" />
     <Compile Include="Mathematical_Application\IKernel\Gaussian_Kernel.cs" />
     <Compile Include="Mathematical_Application\IKernel\IKernel.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_5_Update.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution.cs" />
+    <Compile Include="Mathematical_Application\IFunction\Sigmoid_IFunction.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_C.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_M.cs" />
