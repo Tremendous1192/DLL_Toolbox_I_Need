@@ -16,14 +16,14 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         {
             double[,] result = new double[input.GetLength(0), input.GetLength(1)];
 
-            double exp = 1.0;
+            double sigmoid = 1.0;
 
             for (int j = 0; j < input.GetLength(0); j++)
             {
                 for (int k = 0; k < input.GetLength(1); k++)
                 {
-                    exp = Math.Exp(input[j, k]);
-                    result[j, k] = input[j, k] * exp;
+                    sigmoid = 1.0 / (1.0 + Math.Exp(-input[j, k]));
+                    result[j, k] = input[j, k] * sigmoid;
                 }
             }
 
@@ -34,14 +34,14 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         {
             double[,] result = new double[input.GetLength(0), input.GetLength(1)];
 
-            double exp = 1.0;
+            double sigmoid = 1.0;
 
             for (int j = 0; j < input.GetLength(0); j++)
             {
                 for (int k = 0; k < input.GetLength(1); k++)
                 {
-                    exp = Math.Exp(input[j, k]);
-                    result[j, k] = (1 + input[j, k]) * exp;
+                    sigmoid = 1.0 / (1.0 + Math.Exp(-input[j, k]));
+                    result[j, k] = sigmoid * (1.0 + input[j, k] * (1 - sigmoid));
                 }
             }
 
