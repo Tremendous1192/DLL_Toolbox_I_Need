@@ -7,11 +7,18 @@ using System.Threading.Tasks;
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
 
-    public partial class Multiclass_Classification_Final_Layer
+
+    public partial class Regression_Final_Layer
     {
 
-        public void Step_4_5th_Calculate_Target_Function_and_Delta()
+
+        /// <summary>
+        /// 損失関数の計算とパラメータ更新のためのdeltaを計算する。
+        /// </summary>
+        /// <param name="Teach"></param>
+        public void Step_2_3rd_Calculate_Target_Function_and_Delta(double[,] Teach)
         {
+            teach = Teach;
 
             double[,] Reciprocal_Number_Output = Matrix.Reciprocal_Number_Matrix(f_wx_plus_b);
 
@@ -24,8 +31,9 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             double[,] ln_output = Matrix.Logarithm_LN(f_wx_plus_b);
             double[,] bb = Matrix.Hadamard_product(teach, ln_output);
             target_function = -Matrix.Summation_X(bb);
-
         }
+
+
 
     }
 

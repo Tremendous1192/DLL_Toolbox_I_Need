@@ -13,6 +13,10 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         public Hidden_Layer()
         {
             ud = new Uniform_Distribution();
+            gamma = 0.01;
+            L_1 = -1;
+            L_2 = -1;
+            drop_out = -1;
         }
 
         public void Preset_1_4th_Set_w(double[,] W)
@@ -23,12 +27,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         {
             w = new double[output_dimension, input_dimension];
 
-            Random r = new Random();
             for (int j = 0; j < w.GetLength(0); j++)
             {
                 for (int k = 0; k < w.GetLength(1); k++)
                 {
-                    w[j, k] = (r.NextDouble() - 0.5) * 2.0;
+                    w[j, k] = (ud.NextDouble() - 0.5) * 2.0;
                 }
             }
 
@@ -42,14 +45,13 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         {
             b = new double[output_dimension, 1];
 
-            Random r = new Random();
             for (int j = 0; j < b.GetLength(0); j++)
             {
-                b[j, 0] = (r.NextDouble() - 0.5) * 2.0;
+                b[j, 0] = (ud.NextDouble() - 0.5) * 2.0;
             }
         }
 
-        public void Preset_3_4th_Set_Hyper_Parameterw(double Gamma, double L1, double L2, double Drop_out)
+        public void Preset_3_4th_Set_Hyper_Parameter(double Gamma, double L1, double L2, double Drop_out)
         {
             gamma = Math.Max(Gamma, 1.0 / 1000 / 1000);
             L_1 = Math.Max(L1, 0);

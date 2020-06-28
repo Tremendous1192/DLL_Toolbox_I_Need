@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
-
-    public partial class Multiclass_Classification_Final_Layer
+    public partial class Regression_Final_Layer
     {
 
-        public void Step_5_5th_Update()
+        /// <summary>
+        /// パラメータを更新する
+        /// </summary>
+        public void Step_3_3rd_Update()
         {
-
             //wの更新
             double[,] w_d_gamma = Matrix.Scalar_Multiplication(change_w, gamma);
 
@@ -73,10 +74,10 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             b = Matrix.Subtraction(b, dd);
 
+
         }
 
 
     }
-
 
 }
