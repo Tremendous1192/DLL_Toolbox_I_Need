@@ -15,7 +15,7 @@ namespace DLL_Toolbox_I_Need.Demonstration
     {
         public void Demo_003_Design_Matrix_calculation()
         {
-            Console.WriteLine("今回は、少し進んだ行列の計算を紹介します");
+            Console.WriteLine("今回は、計画行列の計算を紹介します");
 
             Console.WriteLine("\nまず、計算に使用する計画行列を表示します");
 

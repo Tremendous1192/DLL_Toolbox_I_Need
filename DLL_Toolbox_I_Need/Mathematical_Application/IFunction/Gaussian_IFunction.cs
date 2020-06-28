@@ -9,10 +9,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
     public class Gaussian_IFunction : IFunction
     {
-        public bool Bool_The_Least_Squares_Method()
-        {
-            return true;
-        }
+
 
         public double[,] Calculate_f_u(double[,] input)
         {
