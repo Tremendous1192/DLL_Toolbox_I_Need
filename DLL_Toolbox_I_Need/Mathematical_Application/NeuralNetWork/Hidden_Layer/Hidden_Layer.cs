@@ -188,6 +188,13 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// </summary>
         IFunction activation_Function;
 
+
+        /// <summary>
+        /// ドロップアウトの確率計算用
+        /// </summary>
+        Uniform_Distribution ud;
+
+
     }
 
 }

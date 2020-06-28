@@ -13,6 +13,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         public Multiclass_Classification_Final_Layer()
         {
             activation_Function = new SoftMax_IFunction();
+            ud = new Uniform_Distribution();
         }
 
         public void Preset_1_3rd_Set_w(double[,] W)

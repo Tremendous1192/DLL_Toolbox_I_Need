@@ -9,6 +9,12 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
     public partial class Regression_Final_Layer
     {
 
+        public Regression_Final_Layer()
+        {
+            ud = new Uniform_Distribution();
+        }
+
+
         public void Preset_1_4th_Set_w(double[,] W)
         {
             w = W;

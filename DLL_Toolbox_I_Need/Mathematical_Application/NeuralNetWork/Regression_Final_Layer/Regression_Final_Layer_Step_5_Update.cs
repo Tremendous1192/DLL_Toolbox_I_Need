@@ -12,9 +12,6 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         public void Step_5_5th_Update()
         {
 
-            Random r = new Random();
-
-
             //wの更新
             double[,] w_d_gamma = Matrix.Scalar_Multiplication(change_w, gamma);
 
@@ -36,7 +33,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 {
                     for (int k = 0; k < bb.GetLength(1); k++)
                     {
-                        if (r.NextDouble() < drop_out)
+                        if (ud.NextDouble() < drop_out)
                         {
                             bb[j, k] = 0;
                         }
@@ -66,7 +63,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             {
                 for (int j = 0; j < dd.GetLength(0); j++)
                 {
-                    if (r.NextDouble() < drop_out)
+                    if (ud.NextDouble() < drop_out)
                     {
                         dd[j, 0] = 0;
                     }
