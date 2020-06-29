@@ -10,7 +10,6 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
     public partial class Multiclass_Classification_Final_Layer
     {
 
-
         /// <summary>
         /// 損失関数の計算とパラメータ更新のためのdeltaを計算する。
         /// </summary>
@@ -19,12 +18,19 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         {
             teach = Teach;
 
-            error = Matrix.Subtraction(f_wx_plus_b, teach);
+            //誤差逆伝搬法のδの計算
+            double[,] Reciprocal_Number_Output = Matrix.Reciprocal_Number_Matrix(f_wx_plus_b);
+
+            double[,] aa = Matrix.Hadamard_product(teach, Reciprocal_Number_Output);
+            error = Matrix.Scalar_Multiplication(aa, -1.0);
 
             delta = Matrix.Hadamard_product(error, f_wx_plus_b);
             change_w = Matrix.Multiplication(delta, Get_input_Transpose());
 
-            target_function = error[0, 0] * error[0, 0] / 2;
+            //損失関数の計算
+            double[,] ln_output = Matrix.Logarithm_LN(f_wx_plus_b);
+            double[,] bb = Matrix.Hadamard_product(teach, ln_output);
+            target_function = -Matrix.Summation_X(bb);
         }
 
 

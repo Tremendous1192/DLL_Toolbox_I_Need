@@ -18,20 +18,19 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <param name="Teach"></param>
         public void Step_2_3rd_Calculate_Target_Function_and_Delta(double[,] Teach)
         {
+            //損失関数の計算
             teach = Teach;
 
-            double[,] Reciprocal_Number_Output = Matrix.Reciprocal_Number_Matrix(f_wx_plus_b);
+            error = Matrix.Subtraction(f_wx_plus_b, teach);
+            target_function = error[0, 0] * error[0, 0] / 2;
 
-            double[,] aa = Matrix.Hadamard_product(teach, Reciprocal_Number_Output);
-            error = Matrix.Scalar_Multiplication(aa, -1.0);
-
+            //誤差逆伝搬法のδの計算
             delta = Matrix.Hadamard_product(error, f_wx_plus_b);
             change_w = Matrix.Multiplication(delta, Get_input_Transpose());
 
-            double[,] ln_output = Matrix.Logarithm_LN(f_wx_plus_b);
-            double[,] bb = Matrix.Hadamard_product(teach, ln_output);
-            target_function = -Matrix.Summation_X(bb);
         }
+
+
 
 
 
