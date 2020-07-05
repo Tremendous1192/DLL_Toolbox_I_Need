@@ -95,11 +95,115 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 Standard_Error[0, k] /= design_Matrix.GetLength(0) - 1;
 
                 //要素数で割って、平方根を取る
-                Standard_Error[0, k] = Math.Sqrt(Standard_Error[0, k]/ design_Matrix.GetLength(0));
+                Standard_Error[0, k] = Math.Sqrt(Standard_Error[0, k] / design_Matrix.GetLength(0));
             }
 
             return Standard_Error;
         }
+
+
+        /// <summary>
+        /// [0,*] 最小値
+        /// [1,*] 第一四分位数
+        /// [2,*] 中央値
+        /// [3,*] 平均値
+        /// [4,*] 第三四分位数
+        /// [5,*] 最大値
+        /// </summary>
+        /// <param name="design_Matrix"></param>
+        /// <returns></returns>
+        public double[,] Summary(double[,] design_matrix)
+        {
+
+            //並べ替え用の配列。
+            //design_matrixを計算に用いると参照渡しになるバグがある。
+            double[,] sorted = new double[design_matrix.GetLength(0), design_matrix.GetLength(1)];
+            for (int j = 0; j < design_matrix.GetLength(0); j++)
+            {
+                for (int k = 0; k < design_matrix.GetLength(1); k++)
+                {
+                    sorted[j, k] = design_matrix[j, k];
+                }
+            }
+
+            //昇順に並び替える
+            double buffer = 0.0;
+            for (int k = 0; k < sorted.GetLength(1); k++)
+            {
+                for (int j = 0; j < sorted.GetLength(0); j++)
+                {
+                    for (int j2 = j + 1; j2 < sorted.GetLength(0); j2++)
+                    {
+                        if (sorted[j, k] > sorted[j2, k])
+                        {
+                            buffer = sorted[j, k];
+                            sorted[j, k] = sorted[j2, k];
+                            sorted[j2, k] = buffer;
+                        }
+                    }
+                }
+            }
+
+            double[,] summary = new double[6, sorted.GetLength(1)];
+            //min and max
+            for (int k = 0; k < summary.GetLength(1); k++)
+            {
+                summary[0, k] = sorted[0, k];
+                summary[5, k] = sorted[sorted.GetLength(0) - 1, k];
+            }
+
+            //平均値
+            for (int k = 0; k < sorted.GetLength(1); k++)
+            {
+                for (int j = 0; j < sorted.GetLength(0); j++)
+                {
+                    summary[3, k] += sorted[j, k];
+                }
+                summary[3, k] /= sorted.GetLength(0);
+            }
+
+            //中央値
+            int median_point = sorted.GetLength(0) / 2;
+            if (sorted.GetLength(0) % 1 == 0)
+            {
+                for (int k = 0; k < sorted.GetLength(1); k++)
+                {
+                    summary[2, k] = (sorted[median_point, k] + sorted[Math.Max(median_point - 1, 0), k]) / 2;
+                }
+            }
+            else
+            {
+                for (int k = 0; k < sorted.GetLength(1); k++)
+                {
+                    summary[2, k] = sorted[median_point, k];
+                }
+            }
+
+            //四分位数
+            //第3四分位数
+            int lower_quartile_point = sorted.GetLength(0) / 4;
+            int upper_quartile_point = Math.Max(sorted.GetLength(0) - sorted.GetLength(0) / 4, 0);
+            if (sorted.GetLength(0) % 4 < 2)
+            {
+                for (int k = 0; k < sorted.GetLength(1); k++)
+                {
+                    summary[1, k] = (sorted[lower_quartile_point, k] + sorted[Math.Max(lower_quartile_point - 1, 0), k]) / 2;
+                    summary[4, k] = (sorted[upper_quartile_point, k] + sorted[Math.Max(upper_quartile_point - 1, 0), k]) / 2;
+                }
+            }
+            else
+            {
+                upper_quartile_point = Math.Max(upper_quartile_point - 1, 0);
+                for (int k = 0; k < sorted.GetLength(1); k++)
+                {
+                    summary[1, k] = sorted[lower_quartile_point, k];
+                    summary[4, k] = sorted[upper_quartile_point, k];
+                }
+            }
+
+            return summary;
+        }
+
 
 
     }

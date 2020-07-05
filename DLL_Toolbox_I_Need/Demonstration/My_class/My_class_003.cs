@@ -21,7 +21,7 @@ namespace DLL_Toolbox_I_Need.Demonstration
 
             Uniform_Distribution ud = new Uniform_Distribution(1);
 
-            Console.WriteLine("\n計画行列A");
+            Console.WriteLine("\n計画行列X");
             double[,] matrix_A = new double[6, 2];
             for (int j = 0; j < matrix_A.GetLength(0); j++)
             {
@@ -33,59 +33,59 @@ namespace DLL_Toolbox_I_Need.Demonstration
             this.Show_Matrix_Element(matrix_A);
             Console.ReadKey();
 
-            Console.WriteLine("\n計画行列Aの平均ベクトルμ^T");
+            Console.WriteLine("\n計画行列Xの平均ベクトルμ^T");
             double[,] result = Design_Matrix.Average(matrix_A);
             this.Show_Matrix_Element(result);
             Console.ReadKey();
 
-            Console.WriteLine("\n計画行列Aの第3行の行ベクトルを得る");
+            Console.WriteLine("\n計画行列Xの第3行の行ベクトルを得る");
             result = Design_Matrix.Pick_Up_Row_Vector(matrix_A, 3);
             this.Show_Matrix_Element(result);
             Console.ReadKey();
 
-            Console.WriteLine("\n計画行列Aの各行ベクトルのL2ノルムを得る");
+            Console.WriteLine("\n計画行列Xの各行ベクトルのL2ノルムを得る");
             result = Design_Matrix.Norm_L2_Array(matrix_A);
             this.Show_Matrix_Element(result);
-            Console.ReadKey();
+            //Console.ReadKey();
 
-            Console.WriteLine("\n計画行列Aの行ベクトルの中で、L2ノルムの最大値を得る");
+            Console.WriteLine("\n計画行列Xの行ベクトルの中で、L2ノルムの最大値を得る");
             double scalar = Design_Matrix.Maximum_Norm_L2(matrix_A);
             Console.WriteLine(scalar);
 
-            Console.WriteLine("\n計画行列Aの行ベクトルの中で、L2ノルム最大の行番号を得る");
+            Console.WriteLine("\n計画行列Xの行ベクトルの中で、L2ノルム最大の行番号を得る");
             int integer = Design_Matrix.Maximum_Norm_L2_Index(matrix_A);
             Console.WriteLine(integer);
-            Console.ReadKey();
+            //Console.ReadKey();
 
-            Console.WriteLine("\n計画行列Aの行ベクトルの中で、L2ノルムの最小値値を得る");
+            Console.WriteLine("\n計画行列Xの行ベクトルの中で、L2ノルムの最小値値を得る");
             scalar = Design_Matrix.Minimum_Norm_L2(matrix_A);
             Console.WriteLine(scalar);
 
-            Console.WriteLine("\n計画行列Aの行ベクトルの中で、L2ノルム最小の行番号を得る");
+            Console.WriteLine("\n計画行列Xの行ベクトルの中で、L2ノルム最小の行番号を得る");
             integer = Design_Matrix.Minimum_Norm_L2_Index(matrix_A);
             Console.WriteLine(integer);
             Console.ReadKey();
 
 
-            Console.WriteLine("\n計画行列Aの標準偏差");
+            Console.WriteLine("\n計画行列Xの標準偏差");
             result = Design_Matrix.Standard_Deviation(matrix_A);
             this.Show_Matrix_Element(result);
 
-            Console.WriteLine("\n計画行列Aの分散・共分散行列");
+            Console.WriteLine("\n計画行列Xの分散・共分散行列");
             result = Design_Matrix.Variance_Covariance_Matrix(matrix_A);
             this.Show_Matrix_Element(result);
 
-            Console.WriteLine("\n計画行列Aの分散・共分散行列の逆行列");
+            Console.WriteLine("\n計画行列Xの分散・共分散行列の逆行列");
             result = Design_Matrix.Inverse_Variance_Covariance_Matrix(matrix_A);
             this.Show_Matrix_Element(result);
 
-            Console.WriteLine("\n計画行列Aの分散・共分散行列と、逆行列の積が単位行列になることを確認する。");
+            Console.WriteLine("\n計画行列Xの分散・共分散行列と、逆行列の積が単位行列になることを確認する。");
             result = Matrix.Multiplication(Design_Matrix.Variance_Covariance_Matrix(matrix_A), Design_Matrix.Inverse_Variance_Covariance_Matrix(matrix_A));
             this.Show_Matrix_Element(result);
             Console.ReadKey();
 
 
-            Console.WriteLine("\n計画行列Aの相関係数の行列を得る");
+            Console.WriteLine("\n計画行列Xの相関係数の行列を得る");
             result = Design_Matrix.Corelation_Matrix(matrix_A);
             this.Show_Matrix_Element(result);
             Console.ReadKey();
@@ -93,7 +93,7 @@ namespace DLL_Toolbox_I_Need.Demonstration
 
 
             double[,] result2 = new double[1, 2];
-            Console.WriteLine("\n計画行列を3分割して、第0グループをテストデータにする。残りは訓練データにする");
+            Console.WriteLine("\n計画行列Xを3分割して、第0グループをテストデータにする。残りは訓練データにする");
             Design_Matrix.Prepare_k_fold_cross_validation(matrix_A, 3, 0, ref result, ref result2);
             Console.WriteLine("\nテストデータ");
             this.Show_Matrix_Element(result);
@@ -101,7 +101,7 @@ namespace DLL_Toolbox_I_Need.Demonstration
             this.Show_Matrix_Element(result2);
             Console.ReadKey();
 
-            Console.WriteLine("\n計画行列Aを6分割して、第1行をテストデータにする。残りは訓練データにする");
+            Console.WriteLine("\n計画行列Xを6分割して、第1行をテストデータにする。残りは訓練データにする");
             Design_Matrix.Prepare_Leave_one_out_cross_validation(matrix_A, 1, ref result, ref result2);
             Console.WriteLine("\nテストデータ");
             this.Show_Matrix_Element(result);
