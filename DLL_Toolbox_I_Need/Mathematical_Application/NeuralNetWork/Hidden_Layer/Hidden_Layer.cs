@@ -80,7 +80,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 途中計算
         /// </summary>
-        public double[,] Get_wx { get { return wx; } }
+        public double[,] Get_wx() { return wx; }
 
         /// <summary>
         /// 途中計算
@@ -89,7 +89,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 途中計算
         /// </summary>
-        public double[,] Get_wx_plus_b { get { return wx_plus_b; } }
+        public double[,] Get_wx_plus_b() { return wx_plus_b; }
 
         /// <summary>
         /// 計算結果
@@ -98,7 +98,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 計算結果
         /// </summary>
-        public double[,] Get_f_wx_plus_b { get { return f_wx_plus_b; } }
+        public double[,] Get_f_wx_plus_b() { return f_wx_plus_b; }
         /// <summary>
         /// 計算結果の転置行列
         /// </summary>
@@ -148,11 +148,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 教師ベクトル
         /// </summary>
-        double[,] teach;
+        //double[,] teach;
         /// <summary>
         /// 教師ベクトル
         /// </summary>
-        public double[,] Get_teach() { return teach; }
+        //public double[,] Get_teach() { return teach; }
 
         /// <summary>
         /// ハイパーパラメーター
@@ -162,20 +162,20 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 誤差
         /// </summary>
-        double[,] error;
+        //double[,] error;
         /// <summary>
         /// 誤差
         /// </summary>
-        public double[,] Get_error() { return error; }
+        //public double[,] Get_error() { return error; }
 
         /// <summary>
         /// 目的関数
         /// </summary>
-        double target_function;
+        //double target_function;
         /// <summary>
         /// 目的関数
         /// </summary>
-        public double Get_target_function() { return target_function; }
+        //public double Get_target_function() { return target_function; }
 
         /// <summary>
         /// 代数計算用のインスタンス

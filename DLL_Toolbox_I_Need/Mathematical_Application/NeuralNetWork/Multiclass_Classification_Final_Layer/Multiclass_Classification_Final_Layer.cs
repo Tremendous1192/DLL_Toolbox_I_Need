@@ -80,7 +80,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 途中計算
         /// </summary>
-        public double[,] Get_wx { get { return wx; } }
+        public double[,] Get_wx() { return wx; }
 
         /// <summary>
         /// 途中計算
@@ -89,7 +89,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 途中計算
         /// </summary>
-        public double[,] Get_wx_plus_b { get { return wx_plus_b; } }
+        public double[,] Get_wx_plus_b() { return wx_plus_b; }
 
         /// <summary>
         /// 計算結果
@@ -98,7 +98,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 計算結果
         /// </summary>
-        public double[,] Get_f_wx_plus_b { get { return f_wx_plus_b; } }
+        public double[,] Get_f_wx_plus_b() { return f_wx_plus_b; }
         /// <summary>
         /// 計算結果の転置行列
         /// </summary>
