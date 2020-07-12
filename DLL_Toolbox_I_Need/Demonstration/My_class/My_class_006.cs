@@ -89,7 +89,7 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("1 Step 学習しました。予測精度がどの程度変わったのかを確認しましょう");
+            Console.WriteLine("1 epoch 学習しました。予測精度がどの程度変わったのかを確認しましょう");
             for (int j = 0; j < list_x.Count; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j]);
@@ -120,12 +120,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("10 Step 学習しました。");
+            Console.WriteLine("10 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 9; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -156,12 +154,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("100 Step 学習しました。");
+            Console.WriteLine("100 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 90; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -192,12 +188,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("1,000 Step 学習しました。");
+            Console.WriteLine("1,000 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 900; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -228,12 +222,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("5,000 Step 学習しました。");
+            Console.WriteLine("5,000 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 4000; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -264,12 +256,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("10,000 Step 学習しました。");
+            Console.WriteLine("10,000 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 5000; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -300,12 +290,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("20,000 Step 学習しました。");
+            Console.WriteLine("20,000 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 10000; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -336,12 +324,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("50,000 Step 学習しました。");
+            Console.WriteLine("50,000 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 30000; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -372,12 +358,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("100,000 Step 学習しました。");
+            Console.WriteLine("100,000 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 50000; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -408,12 +392,10 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
-            Console.WriteLine("1,000,000 Step 学習しました。");
+            Console.WriteLine("1,000,000 epoch 学習しました。");
             for (int j = 0; j < list_x.Count * 900000; j++)
             {
                 rfl.Step_1_3rd_Forward_Propagation(list_x[j % list_x.Count]);
@@ -444,8 +426,6 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.Write("t\t\t");
             foreach (double[,] t in list_t) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine(" ");
-            Console.Write("delta\t\t");
-            foreach (double[,] t in list_delta) { Console.Write(t[0, 0] + "\t"); }
             Console.WriteLine("\n\n");
 
 
@@ -457,7 +437,7 @@ namespace DLL_Toolbox_I_Need.Demonstration
             Console.WriteLine("これを満たすw、bの条件は下記となります。");
             Console.WriteLine("01 : w + b << 0");
             Console.WriteLine("02 : 2w + b >> 0");
-            Console.WriteLine("\n"+"Sigmoid関数の変数(wx+b)の符号がx=1、2で切り替わりその絶対値が大きいことが条件になります。");
+            Console.WriteLine("\n" + "Sigmoid関数の変数(wx+b)の符号がx=1、2で切り替わりその絶対値が大きいことが条件になります。");
             Console.WriteLine("これを満たすw , bの条件は下記になります。");
             Console.WriteLine("01 : w >> 0");
             Console.WriteLine("02 : b << 0");
