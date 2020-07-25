@@ -60,6 +60,7 @@
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_scalar.cs" />
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Combine.cs" />
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Disassemble.cs" />
+    <Compile Include="Demonstration\My_class\Demo_009.cs" />
     <Compile Include="Demonstration\My_class\My_class.cs" />
     <Compile Include="Demonstration\My_class\My_class_001.cs" />
     <Compile Include="Demonstration\My_class\My_class_002.cs" />
@@ -127,6 +128,8 @@
     <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution.cs" />
     <Compile Include="Mathematical_Application\IFunction\Sigmoid_IFunction.cs" />
+    <Compile Include="Mathematical_Application\IKernel\Power_of_10_IKernel.cs" />
+    <Compile Include="Mathematical_Application\IKernel\Power_of_2_IKernel.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_C.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_M.cs" />
