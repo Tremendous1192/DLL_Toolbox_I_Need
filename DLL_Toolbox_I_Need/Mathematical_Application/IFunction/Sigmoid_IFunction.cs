@@ -40,7 +40,8 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 for (int k = 0; k < input.GetLength(1); k++)
                 {
                     exp = Math.Exp(-input[j, k]);
-                    result[j, k] = (1.0 / (1.0 + exp)) * (1.0 / (1.0 + exp)) * exp;
+                    //result[j, k] = (1.0 / (1.0 + exp)) * (1.0 / (1.0 + exp)) * exp;
+                    result[j, k] = exp / (1.0 + exp) / (1.0 + exp);
                 }
             }
 

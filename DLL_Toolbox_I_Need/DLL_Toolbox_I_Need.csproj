@@ -71,6 +71,7 @@
     <Compile Include="Demonstration\My_class\My_class_007.cs" />
     <Compile Include="Demonstration\My_class\My_class_008.cs" />
     <Compile Include="Demonstration\My_class\My_class_010.cs" />
+    <Compile Include="Demonstration\My_class\My_class_011.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_N.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_C.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_S.cs" />

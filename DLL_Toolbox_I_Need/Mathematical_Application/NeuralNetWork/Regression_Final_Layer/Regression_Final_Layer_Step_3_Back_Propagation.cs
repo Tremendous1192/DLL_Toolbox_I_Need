@@ -45,7 +45,6 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             w = Matrix.Subtraction(w, w_change);
 
-
             //bの更新
             double[,] b_d_gamma = Matrix.Scalar_Multiplication(delta, gamma);
 
@@ -73,7 +72,6 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             }
 
             b = Matrix.Subtraction(b, b_change);
-
 
         }
 
