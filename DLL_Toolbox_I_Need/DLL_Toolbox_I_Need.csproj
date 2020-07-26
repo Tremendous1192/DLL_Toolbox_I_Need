@@ -60,7 +60,7 @@
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_scalar.cs" />
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Combine.cs" />
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Disassemble.cs" />
-    <Compile Include="Demonstration\My_class\Demo_009.cs" />
+    <Compile Include="Demonstration\My_class\My_class_009.cs" />
     <Compile Include="Demonstration\My_class\My_class.cs" />
     <Compile Include="Demonstration\My_class\My_class_001.cs" />
     <Compile Include="Demonstration\My_class\My_class_002.cs" />
@@ -70,6 +70,7 @@
     <Compile Include="Demonstration\My_class\My_class_006.cs" />
     <Compile Include="Demonstration\My_class\My_class_007.cs" />
     <Compile Include="Demonstration\My_class\My_class_008.cs" />
+    <Compile Include="Demonstration\My_class\My_class_010.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_N.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_C.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_S.cs" />
