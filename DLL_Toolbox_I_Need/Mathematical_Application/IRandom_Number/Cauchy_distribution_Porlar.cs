@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
-    class Cauchy_distribution_Porlar
+    public class Cauchy_distribution_Porlar : IRandom_Number
     {
         /// <summary>
         /// 計算結果

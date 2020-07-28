@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
-    class Half_Normal_Distribution_Polar : IRandom_Number
+    public class Half_Normal_Distribution_Polar : IRandom_Number
     {
 
 

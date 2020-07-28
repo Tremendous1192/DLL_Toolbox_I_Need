@@ -24,6 +24,9 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         {
             string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
 
+            //.Net CoreでShift_JISを使用するため
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
             Stream stream = this.GetType().GetTypeInfo().Assembly.GetManifestResourceStream(txt_file_name);
             Encoding sjisEnc = Encoding.GetEncoding("Shift_JIS");
 
@@ -55,6 +58,9 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         public void Write_text_Add(string txt_file_name, string[] WrittenText)
         {
             string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
+
+            //.Net CoreでShift_JISを使用するため
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
             Stream stream = this.GetType().GetTypeInfo().Assembly.GetManifestResourceStream(txt_file_name);
             Encoding sjisEnc = Encoding.GetEncoding("Shift_JIS");
@@ -92,6 +98,9 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         public void Write_text_Add(string txt_file_name, string[,] WrittenText)
         {
             string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
+
+            //.Net CoreでShift_JISを使用するため
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
             Stream stream = this.GetType().GetTypeInfo().Assembly.GetManifestResourceStream(txt_file_name);
             Encoding sjisEnc = Encoding.GetEncoding("Shift_JIS");

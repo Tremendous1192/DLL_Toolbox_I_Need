@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
 
-    class Uniform_Distribution : IRandom_Number
+    public class Uniform_Distribution : IRandom_Number
     {
 
         /// <summary>
