@@ -162,11 +162,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// 誤差
         /// </summary>
-        double[,] error;
+        //double[,] error;
         /// <summary>
         /// 誤差
         /// </summary>
-        public double[,] Get_error() { return error; }
+        //public double[,] Get_error() { return error; }
 
         /// <summary>
         /// 目的関数
