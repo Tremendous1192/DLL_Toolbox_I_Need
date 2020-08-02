@@ -81,6 +81,8 @@
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_N.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_C.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_S.cs" />
+    <Compile Include="Mathematical_Application\IScalar\In_Circle_IScalar.cs" />
+    <Compile Include="Mathematical_Application\IScalar\Gaussian_IScalar.cs" />
     <Compile Include="Mathematical_Application\IFunction\Hyperbolic_Tangent_IFunction.cs" />
     <Compile Include="Mathematical_Application\IKernel\Gaussian_Kernel.cs" />
     <Compile Include="Mathematical_Application\IKernel\IKernel.cs" />
@@ -96,7 +98,10 @@
     <Compile Include="Mathematical_Application\IRandom_Number\Half_Normal_Distribution_Polar.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\IRandom_Number.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Log_Normal_Distribution_Polar.cs" />
+    <Compile Include="Mathematical_Application\IScalar\IScalar.cs" />
     <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression_A.cs" />
+    <Compile Include="Mathematical_Application\Monte_Carlo_Method\Monte_Carlo.cs" />
+    <Compile Include="Mathematical_Application\Monte_Carlo_Method\Monte_Carlo_Method_I.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_0_Constructor.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_1_Forward_Propagation.cs" />
