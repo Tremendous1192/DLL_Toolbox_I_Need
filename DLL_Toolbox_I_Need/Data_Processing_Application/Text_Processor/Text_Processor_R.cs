@@ -23,7 +23,7 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         /// <returns></returns>
         public string[] Read_text(string txt_file_name)
         {
-            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
+            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name + ".txt");
 
             //.Net CoreでShift_JISを使用するため
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -72,7 +72,7 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         /// <returns></returns>
         public string[,] Read_text_2dim_Split_by_camma(string txt_file_name)
         {
-            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
+            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name + ".txt");
 
             //.Net CoreでShift_JISを使用するため
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);

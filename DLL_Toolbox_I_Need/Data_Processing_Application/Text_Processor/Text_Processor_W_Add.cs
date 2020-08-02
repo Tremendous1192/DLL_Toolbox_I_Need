@@ -22,7 +22,7 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         /// <returns></returns>
         public void Write_text_Add(string txt_file_name, string WrittenText)
         {
-            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
+            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name + ".txt");
 
             //.Net CoreでShift_JISを使用するため
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -57,7 +57,7 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         /// <returns></returns>
         public void Write_text_Add(string txt_file_name, string[] WrittenText)
         {
-            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
+            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name + ".txt");
 
             //.Net CoreでShift_JISを使用するため
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -97,7 +97,7 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         /// <returns></returns>
         public void Write_text_Add(string txt_file_name, string[,] WrittenText)
         {
-            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name);
+            string path = System.IO.Path.Combine(this.Get_Current_Directory(), txt_file_name + ".txt");
 
             //.Net CoreでShift_JISを使用するため
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
