@@ -43,6 +43,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 list_ud.Add(new Uniform_Distribution(seed));
             }
 
+
             //積分を行う
             double[] xs = new double[range_min.Length];
             for (uint j =0;j<calculation_count;j++)
@@ -52,6 +53,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 {
                     xs[k] = list_ud[k].NextDouble(range_max[k], range_min[k]);
                 }
+               
                 numerator += iscalar.Calculate_f_u(xs);
                 denominator++;
             }
@@ -98,6 +100,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             {
                 list_ud.Add(new Uniform_Distribution(seeds[j]));
             }
+
 
             //積分を行う
             double[] xs = new double[range_min.Length];
