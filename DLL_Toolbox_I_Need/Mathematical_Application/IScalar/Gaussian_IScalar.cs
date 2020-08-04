@@ -21,6 +21,44 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             return Math.Exp(-result / 2.0);
         }
 
+        const decimal Napier = 2.718281828459045235360287471352m;
+
+        public decimal Calculate_f_u(decimal[] input)
+        {
+            decimal index = 0.0m;
+
+            for (int j = 0; j < input.Length; j++)
+            {
+                index += input[j] * input[j];
+            }
+
+            decimal integer = Math.Floor(index);
+            decimal fraction = index - integer;
+
+            decimal denominator = 1m;
+            for (uint j = 0; j < integer; j++)
+            {
+                denominator *= Napier;
+            }
+
+            decimal fraction_e = 1m;
+            //x^1 - x^20
+            if (fraction != 0)
+            {
+                for (uint j = 1; j <= 10; j++)
+                {
+                    decimal x = -fraction;
+                    for (decimal k = 2; k <= j; k++)
+                    {
+                        x *= -fraction / k;
+                    }
+                    fraction_e += x;
+                }
+            }
+
+            return fraction_e / denominator;
+        }
+
     }
 
 }

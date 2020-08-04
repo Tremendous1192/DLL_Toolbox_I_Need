@@ -35,6 +35,8 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         const uint counter_dim_max = 19937;
 
 
+       const double denominator_double = uint.MaxValue;
+
         /// <summary>
         /// constructor
         /// </summary>
@@ -47,6 +49,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             W = X ^ Z;
 
             counter_array = new bool[counter_dim_max];
+
         }
 
         /// <summary>
@@ -61,6 +64,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             W = X ^ Z;
 
             counter_array = new bool[counter_dim_max];
+
         }
 
         /// <summary>
@@ -75,6 +79,8 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             Y = (UInt32)(seed >> 32) & 0xFFFFFFFF;
             Z = (UInt32)(seed & 0xFFFFFFFF);
             W = X ^ Z;
+
+            counter_array = new bool[counter_dim_max];
         }
 
         /// <summary>
@@ -90,8 +96,10 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             Z = W;
             W = (W = (W ^ (W >> 19)) ^ (T ^ (T >> 8)));
 
-            result = W * 1.0;
-            result /= int.MaxValue * 2.0;
+            double numerator =  W;
+
+            result = numerator / denominator_double;
+            //result /= uint.MaxValue;
 
             Count_Up();
 
@@ -105,18 +113,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <returns></returns>
         public double NextDouble(double max, double min)
         {
-            T = (X ^ (X << 11));
-            X = Y;
-            Y = Z;
-            Z = W;
-            W = (W = (W ^ (W >> 19)) ^ (T ^ (T >> 8)));
-
-            result = W * 1.0;
-            result /= int.MaxValue * 2.0;
-
-            Count_Up();
-
-            return result * (Math.Max(max, min) - Math.Min(max, min)) - Math.Min(max, min);
+            return min + (max - min) * NextDouble();
         }
 
 

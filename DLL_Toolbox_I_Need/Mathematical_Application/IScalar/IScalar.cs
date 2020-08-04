@@ -10,5 +10,9 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
     {
         double Calculate_f_u(double[] input);
 
+        decimal Calculate_f_u(decimal[] input);
+
+
+
     }
 }

@@ -19,7 +19,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <param name="range_max"></param>
         /// <param name="range_min"></param>
         public static void Monte_Carlo_Integration
-            (ref double result, ref double numerator, ref uint denominator
+            (ref decimal result, ref decimal numerator, ref decimal denominator
             , uint calculation_count
             , IScalar iscalar, double[] range_max, double[] range_min)
         {
@@ -45,20 +45,20 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
             //積分を行う
-            double[] xs = new double[range_min.Length];
+            decimal[] xs = new decimal[range_min.Length];
             for (uint j =0;j<calculation_count;j++)
             {
                 //乱数を生成する
                 for (int k=0;k<list_ud.Count;k++)
                 {
-                    xs[k] = list_ud[k].NextDouble(range_max[k], range_min[k]);
+                    xs[k] = (decimal)list_ud[k].NextDouble(range_max[k], range_min[k]);
                 }
                
                 numerator += iscalar.Calculate_f_u(xs);
                 denominator++;
             }
 
-            result = numerator / (1.0 * denominator);
+            result = numerator /  denominator;
 
         }
 
@@ -76,7 +76,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <param name="range_min"></param>
         /// <param name="seeds"></param>
         public static void Monte_Carlo_Integration
-             (ref double result, ref double numerator, ref uint denominator
+             (ref decimal result, ref decimal numerator, ref decimal denominator
               , uint calculation_count
               , IScalar iscalar, double[] range_max, double[] range_min
               , uint[] seeds)
@@ -103,19 +103,19 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
             //積分を行う
-            double[] xs = new double[range_min.Length];
+            decimal[] xs = new decimal[range_min.Length];
             for (uint j = 0; j < calculation_count; j++)
             {
                 //乱数を生成する
                 for (int k = 0; k < list_ud.Count; k++)
                 {
-                    xs[k] = list_ud[k].NextDouble(range_max[k], range_min[k]);
+                    xs[k] =(decimal)list_ud[k].NextDouble(range_max[k], range_min[k]);
                 }
                 numerator += iscalar.Calculate_f_u(xs);
                 denominator++;
             }
 
-            result = numerator / (1.0 * denominator);
+            result = numerator / denominator;
 
         }
 
