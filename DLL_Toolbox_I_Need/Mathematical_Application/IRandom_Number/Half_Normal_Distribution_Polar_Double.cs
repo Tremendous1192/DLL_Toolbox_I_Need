@@ -6,23 +6,24 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
-    public class Log_Normal_Distribution_Polar : IRandom_Number
+    public partial class Half_Normal_Distribution_Polar : IRandom_Number
     {
+
 
 
         /// <summary>
         /// 計算結果
         /// </summary>
-        double result;
+        double result_double;
 
         /// <summary>
         /// 計算結果をもう一度取得する
         /// </summary>
         /// <returns></returns>
-        public double Result()
+        public double Result_Double()
         {
             Update_Seed();
-            return result;
+            return result_double;
         }
 
         /// <summary>
@@ -34,16 +35,8 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// 種
         /// </summary>
         uint seed_1, seed_2;
-        public uint Get_Seed_1()
-        {
-            seed_1 = ud1.Get_Seed();
-            return seed_1;
-        }
-        public uint Get_Seed_2()
-        {
-            seed_2 = ud2.Get_Seed();
-            return seed_2;
-        }
+        public uint Get_Seed_1() { return seed_1; }
+        public uint Get_Seed_2() { return seed_2; }
         private void Update_Seed()
         {
             seed_1 = ud1.Get_Seed();
@@ -58,7 +51,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// constructor
         /// </summary>
-        public Log_Normal_Distribution_Polar()
+        public Half_Normal_Distribution_Polar()
         {
             seed_1 = (uint)Math.Abs(DateTime.Now.Millisecond);
             seed_2 = seed_1 + 1;
@@ -71,8 +64,8 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <summary>
         /// constructor
         /// </summary>
-        /// <param name="the_seed_1"></param>
-        public Log_Normal_Distribution_Polar(uint the_seed_1, uint the_seed_2)
+        /// <param name="the_seed"></param>
+        public Half_Normal_Distribution_Polar(uint the_seed_1, uint the_seed_2)
         {
             seed_1 = the_seed_1;
             if (the_seed_1 == the_seed_2 && the_seed_1 == uint.MaxValue)
@@ -106,7 +99,6 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
         /// <summary>
         /// 乱数を生成する
-        /// 平均値 0
         /// 標準偏差 1
         /// </summary>
         /// <returns></returns>
@@ -117,9 +109,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             double u1 = ud1.NextDouble();
             double u2 = ud2.NextDouble();
 
-            double v1 = 2 * u1 - 1;
-            double v2 = 2 * u2 - 1;
-            double v = v1 * v1 + v2 * v2;
+            double v = u1 * u1 + u2 * u2;
 
             if (v <= 0 || 1 <= v)
             {
@@ -128,73 +118,35 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             double w = Math.Sqrt(-2 * Math.Log(v) / v);
 
-            double y1 = v1 * w;
-            double y2 = v2 * w;
-
+            double y1 = u1 * w;
+            double y2 = u2 * w;
 
             if (even)
             {
-                result = y1;
+                result_double = y1;
                 even = false;
             }
             else
             {
-                result = y2;
+                result_double = y2;
                 even = true;
             }
 
-            return Math.Exp(result);
+            return result_double;
         }
 
 
 
         /// <summary>
         /// 乱数を生成する
-        /// 平均値 average
         /// 標準偏差 std
         /// </summary>
-        /// <param name="average"></param>
         /// <param name="std"></param>
         /// <returns></returns>
-        public double NextDouble(double average, double std)
+        public double NextDouble(double std)
         {
-        retry_point:
-
-            double u1 = ud1.NextDouble();
-            double u2 = ud2.NextDouble();
-
-            double v1 = 2 * u1 - 1;
-            double v2 = 2 * u2 - 1;
-            double v = v1 * v1 + v2 * v2;
-
-            if (v <= 0 || 1 <= v)
-            {
-                goto retry_point;
-            }
-
-            double w = Math.Sqrt(-2 * Math.Log(v) / v);
-
-            double y1 = v1 * w;
-            double y2 = v2 * w;
-
-            if (even)
-            {
-                result = y1;
-                even = false;
-            }
-            else
-            {
-                result = y2;
-                even = true;
-            }
-
-            result = Math.Exp(result * Math.Abs(std) + average);
-
-            return result;
+            return NextDouble() * Math.Abs(std);
         }
-
-
-
 
     }
 

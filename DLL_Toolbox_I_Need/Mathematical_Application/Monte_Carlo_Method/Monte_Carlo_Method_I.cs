@@ -21,7 +21,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         public static void Monte_Carlo_Integration
             (ref decimal result, ref decimal numerator, ref decimal denominator
             , uint calculation_count
-            , IScalar iscalar, double[] range_max, double[] range_min)
+            , IScalar iscalar, decimal[] range_max, decimal[] range_min)
         {
             //積分区間の最大値と最小値の次元をそろえる
             if (range_max.Length != range_min.Length)
@@ -51,9 +51,9 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 //乱数を生成する
                 for (int k=0;k<list_ud.Count;k++)
                 {
-                    xs[k] = (decimal)list_ud[k].NextDouble(range_max[k], range_min[k]);
+                    xs[k] = list_ud[k].NextDecimal(range_max[k], range_min[k]);
                 }
-               
+
                 numerator += iscalar.Calculate_f_u(xs);
                 denominator++;
             }
@@ -78,7 +78,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         public static void Monte_Carlo_Integration
              (ref decimal result, ref decimal numerator, ref decimal denominator
               , uint calculation_count
-              , IScalar iscalar, double[] range_max, double[] range_min
+              , IScalar iscalar, decimal[] range_max, decimal[] range_min
               , uint[] seeds)
         {
             //積分区間の最大値と最小値の次元をそろえる
@@ -109,7 +109,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 //乱数を生成する
                 for (int k = 0; k < list_ud.Count; k++)
                 {
-                    xs[k] =(decimal)list_ud[k].NextDouble(range_max[k], range_min[k]);
+                    xs[k] = list_ud[k].NextDecimal(range_max[k], range_min[k]);
                 }
                 numerator += iscalar.Calculate_f_u(xs);
                 denominator++;

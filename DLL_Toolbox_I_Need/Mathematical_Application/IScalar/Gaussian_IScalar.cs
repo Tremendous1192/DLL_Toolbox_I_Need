@@ -32,31 +32,18 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 index += input[j] * input[j];
             }
 
-            decimal integer = Math.Floor(index);
-            decimal fraction = index - integer;
-
+            decimal integer = Math.Floor(index / 2m);
             decimal denominator = 1m;
             for (uint j = 0; j < integer; j++)
             {
                 denominator *= Napier;
             }
 
-            decimal fraction_e = 1m;
-            //x^1 - x^20
-            if (fraction != 0)
-            {
-                for (uint j = 1; j <= 10; j++)
-                {
-                    decimal x = -fraction;
-                    for (decimal k = 2; k <= j; k++)
-                    {
-                        x *= -fraction / k;
-                    }
-                    fraction_e += x;
-                }
-            }
+            decimal fraction = index - integer;
 
-            return fraction_e / denominator;
+
+            return Taylor_Series_Decimal.Exponential(-fraction)/denominator;
+
         }
 
     }

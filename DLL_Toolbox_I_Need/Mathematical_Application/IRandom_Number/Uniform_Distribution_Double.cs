@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
 
-    public class Uniform_Distribution : IRandom_Number
+    public partial class Uniform_Distribution : IRandom_Number
     {
 
         /// <summary>
         /// 計算結果
         /// </summary>
-        double result;
+        double result_double;
 
         /// <summary>
         /// 計算結果をもう一度取得する
         /// </summary>
         /// <returns></returns>
-        public double Result()
-        { return result; }
+        public double Result_Double()
+        { return result_double; }
+
 
         /// <summary>
         /// 種
@@ -98,12 +99,12 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             double numerator =  W;
 
-            result = numerator / denominator_double;
+            result_double = numerator / denominator_double;
             //result /= uint.MaxValue;
 
             Count_Up();
 
-            return result;
+            return result_double;
         }
 
         /// <summary>
@@ -113,8 +114,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <returns></returns>
         public double NextDouble(double max, double min)
         {
-            return min + (max - min) * NextDouble();
+            result_double = min + (max - min) * NextDouble();
+            return result_double;
         }
+
+
 
 
 

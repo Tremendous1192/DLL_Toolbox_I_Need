@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
-    public class Normal_Distribution_Polar : IRandom_Number
+    public partial class Normal_Distribution_Polar : IRandom_Number
     {
 
         /// <summary>
         /// 計算結果
         /// </summary>
-        double result;
+        double result_double;
 
         /// <summary>
         /// 計算結果をもう一度取得する
         /// </summary>
         /// <returns></returns>
-        public double Result()
+        public double Result_Double()
         {
             Update_Seed();
-            return result;
+            return result_double;
         }
 
         /// <summary>
@@ -133,16 +133,16 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             if (even)
             {
-                result = y1;
+                result_double = y1;
                 even = false;
             }
             else
             {
-                result = y2;
+                result_double = y2;
                 even = true;
             }
 
-            return result;
+            return result_double;
         }
 
 
@@ -157,37 +157,9 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// <returns></returns>
         public double NextDouble(double average, double std)
         {
-        retry_point:
+            result_double = NextDouble() * Math.Abs(std) + average;
+            return result_double;
 
-            double u1 = ud1.NextDouble();
-            double u2 = ud2.NextDouble();
-
-            double v1 = 2 * u1 - 1;
-            double v2 = 2 * u2 - 1;
-            double v = v1 * v1 + v2 * v2;
-
-            if (v <= 0 || 1 <= v)
-            {
-                goto retry_point;
-            }
-
-            double w = Math.Sqrt(-2 * Math.Log(v) / v);
-
-            double y1 = v1 * w;
-            double y2 = v2 * w;
-
-            if (even)
-            {
-                result = y1;
-                even = false;
-            }
-            else
-            {
-                result = y2;
-                even = true;
-            }
-
-            return result * Math.Abs(std) + average;
         }
 
     }

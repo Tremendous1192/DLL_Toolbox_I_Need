@@ -10,6 +10,9 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
     public interface IRandom_Number
     {
         double NextDouble();
+
+        decimal NextDecimal();
+
     }
 
 }

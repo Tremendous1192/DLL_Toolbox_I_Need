@@ -78,15 +78,17 @@
     <Compile Include="Demonstration\My_class\My_class_008.cs" />
     <Compile Include="Demonstration\My_class\My_class_010.cs" />
     <Compile Include="Demonstration\My_class\My_class_011.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar_Decimal.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_N.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_C.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_S.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Half_Normal_Distribution_Polar_Decimal.cs" />
     <Compile Include="Mathematical_Application\IScalar\In_Circle_IScalar.cs" />
     <Compile Include="Mathematical_Application\IScalar\Gaussian_IScalar.cs" />
     <Compile Include="Mathematical_Application\IFunction\Hyperbolic_Tangent_IFunction.cs" />
     <Compile Include="Mathematical_Application\IKernel\Gaussian_Kernel.cs" />
     <Compile Include="Mathematical_Application\IKernel\IKernel.cs" />
-    <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar_Double.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_A.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_I.cs" />
@@ -95,11 +97,12 @@
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_M.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_P.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_V.cs" />
-    <Compile Include="Mathematical_Application\IRandom_Number\Half_Normal_Distribution_Polar.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Half_Normal_Distribution_Polar_Double.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\IRandom_Number.cs" />
-    <Compile Include="Mathematical_Application\IRandom_Number\Log_Normal_Distribution_Polar.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Log_Normal_Distribution_Polar_Double.cs" />
     <Compile Include="Mathematical_Application\IScalar\IScalar.cs" />
     <Compile Include="Mathematical_Application\Liner_Regression\Liner_Regression_A.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Log_Normal_Distribution_Polar_Decimal.cs" />
     <Compile Include="Mathematical_Application\Monte_Carlo_Method\Monte_Carlo.cs" />
     <Compile Include="Mathematical_Application\Monte_Carlo_Method\Monte_Carlo_Method_I.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer.cs" />
@@ -138,11 +141,12 @@
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_1_Forward_Propagation.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_2_Calculate_Loss_and_Delta.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Regression_Final_Layer\Regression_Final_Layer_Step_3_Back_Propagation.cs" />
-    <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar.cs" />
-    <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar_Double.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution_Double.cs" />
     <Compile Include="Mathematical_Application\IFunction\Sigmoid_IFunction.cs" />
     <Compile Include="Mathematical_Application\IKernel\Power_of_10_IKernel.cs" />
     <Compile Include="Mathematical_Application\IKernel\Power_of_2_IKernel.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar_Decimal.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_C.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_M.cs" />
@@ -155,10 +159,15 @@
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_C2.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_L.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_C.cs" />
+    <Compile Include="Mathematical_Application\IRandom_Number\Uniform_Distribution_Decimal.cs" />
+    <Compile Include="Mathematical_Application\Taylor_Series\Taylor_Series_Decimal_Natural_Logarithm.cs" />
+    <Compile Include="Mathematical_Application\Taylor_Series\Taylor_Series_Decimal_Square_Root.cs" />
+    <Compile Include="Mathematical_Application\Taylor_Series\Taylor_Series_Decimal_Exponential.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
