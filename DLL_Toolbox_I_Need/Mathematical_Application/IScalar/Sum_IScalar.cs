@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
-    public class Gaussian_IScalar : IScalar
+    public class Sum_IScalar : IScalar
     {
 
         public double Calculate_f_u(double[] input)
         {
             double result = 0.0;
 
-            for (int j=0;j<input.Length;j++)
+            for (int j = 0; j < input.Length; j++)
             {
-                result += input[j] * input[j];
+                result += input[j];
             }
 
-            return Math.Exp(-result / 2.0);
+            return result;
         }
 
         const decimal Napier = 2.718281828459045235360287471352m;
@@ -29,13 +29,12 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             for (int j = 0; j < input.Length; j++)
             {
-                index += input[j] * input[j];
+                index += input[j];
             }
 
-            return Taylor_Series_Decimal.Exponential(-index / 2m);
+            return index;
 
         }
 
     }
-
 }

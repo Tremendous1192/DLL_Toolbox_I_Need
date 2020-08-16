@@ -78,6 +78,8 @@
     <Compile Include="Demonstration\My_class\My_class_008.cs" />
     <Compile Include="Demonstration\My_class\My_class_010.cs" />
     <Compile Include="Demonstration\My_class\My_class_011.cs" />
+    <Compile Include="Mathematical_Application\IScalar\Constant_IScalar.cs" />
+    <Compile Include="Mathematical_Application\IAction\IAction.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Cauchy_distribution_Porlar_Decimal.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_N.cs" />
     <Compile Include="Mathematical_Application\Design_Matrix\Design_Matrix_C.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Mathematical_Application\IRandom_Number\Log_Normal_Distribution_Polar_Decimal.cs" />
     <Compile Include="Mathematical_Application\Monte_Carlo_Method\Monte_Carlo.cs" />
     <Compile Include="Mathematical_Application\Monte_Carlo_Method\Monte_Carlo_Method_I.cs" />
+    <Compile Include="Mathematical_Application\Monte_Carlo_Method\Monte_Carlo_Method_M.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_0_Constructor.cs" />
     <Compile Include="Mathematical_Application\NeuralNetWork\Hidden_Layer\Hidden_Layer_Step_1_Forward_Propagation.cs" />
@@ -147,6 +150,8 @@
     <Compile Include="Mathematical_Application\IKernel\Power_of_10_IKernel.cs" />
     <Compile Include="Mathematical_Application\IKernel\Power_of_2_IKernel.cs" />
     <Compile Include="Mathematical_Application\IRandom_Number\Normal_Distribution_Polar_Decimal.cs" />
+    <Compile Include="Mathematical_Application\IAction\Square_Sum_Half_IAction.cs" />
+    <Compile Include="Mathematical_Application\IScalar\Square_Sum_IScalar.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_C.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_M.cs" />
@@ -155,6 +160,7 @@
     <Compile Include="Mathematical_Application\Statistics\Statistics_S.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_U.cs" />
     <Compile Include="Mathematical_Application\Statistics\Statistics_V.cs" />
+    <Compile Include="Mathematical_Application\IScalar\Sum_IScalar.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_C2.cs" />
     <Compile Include="Mathematical_Application\SupportVectorMachine\Support_Vector_Machine_L.cs" />

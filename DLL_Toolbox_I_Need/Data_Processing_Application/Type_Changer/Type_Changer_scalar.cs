@@ -77,7 +77,7 @@ namespace DLL_Toolbox_I_Need.Data_Processing_Application
         /// <returns></returns>
         public static string Number_to_String(double input)
         {
-            return input.ToString();
+            return input.ToString("G12");
         }
 
         /// <summary>

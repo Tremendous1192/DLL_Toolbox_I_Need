@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace DLL_Toolbox_I_Need.Mathematical_Application
 {
-    public class Gaussian_IScalar : IScalar
+    public class Square_Sum_Half_IAction : IAction
     {
-
         public double Calculate_f_u(double[] input)
         {
             double result = 0.0;
 
-            for (int j=0;j<input.Length;j++)
+            for (int j = 0; j < input.Length; j++)
             {
                 result += input[j] * input[j];
             }
 
-            return Math.Exp(-result / 2.0);
+            return result / 2.0;
         }
 
-        const decimal Napier = 2.718281828459045235360287471352m;
 
         public decimal Calculate_f_u(decimal[] input)
         {
@@ -32,10 +30,9 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 index += input[j] * input[j];
             }
 
-            return Taylor_Series_Decimal.Exponential(-index / 2m);
-
+            return index / 2m;
         }
 
-    }
 
+    }
 }

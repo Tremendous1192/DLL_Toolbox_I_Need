@@ -31,7 +31,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             decimal result = (decimal)Math.Log((double)a) + numerator / denominator;
 
 
-            for (uint j = 2; j <= 20; j++)
+            for (uint j = 2; j <= 6; j++)
             {
                 numerator *= delta;
                 denominator *= j * a;

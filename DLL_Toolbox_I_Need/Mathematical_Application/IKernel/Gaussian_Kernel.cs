@@ -26,7 +26,6 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         public double Calculate(double[,] row_Vector_1, double[,] row_Vector_2)
         {
             double[,] delta_row = Matrix.Subtraction(row_Vector_1, row_Vector_2);
-
             if (set)
             {
                 double[,] delta_column = Matrix.Transposed_Matrix(delta_row);

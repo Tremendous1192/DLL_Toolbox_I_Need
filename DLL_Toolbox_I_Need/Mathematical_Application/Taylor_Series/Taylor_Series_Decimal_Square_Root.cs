@@ -33,7 +33,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
 
 
-            for (uint j = 2; j <= 10; j++)
+            for (uint j = 2; j <= 6; j++)
             {
                 numerator *= ((j - 2) * 2m + 1) * delta;
                 denominator *= 2 * a * j;

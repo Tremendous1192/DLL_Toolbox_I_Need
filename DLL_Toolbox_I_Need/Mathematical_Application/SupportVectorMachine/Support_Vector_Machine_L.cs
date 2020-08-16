@@ -29,8 +29,8 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             double[,] kernel_Matrix = new double[design_Matrix_without_constant.GetLength(0), design_Matrix_without_constant.GetLength(0)];
 
             //行ベクトル
-            double[,] r_j = new double[1, 1];
-            double[,] r_k = new double[1, 1];
+            double[,] r_j = new double[1, design_Matrix_without_constant.GetLength(1)];
+            double[,] r_k = new double[1, design_Matrix_without_constant.GetLength(1)];
 
             //カーネルを計算しておく
             double k_jk = 0;

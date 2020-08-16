@@ -13,23 +13,39 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
         public static decimal Exponential(decimal input)
         {
+            if (input == 0m) { return 1m; }
+            else if (input==decimal.MinValue) { return 0m; }
 
             decimal a = Math.Round(input);
             decimal e_a = 1m;
-            if (a==0m) { }
-            else if(a>0)
+            if (a == 0m) { }
+            else if (a > 0)
             {
-                for (uint j=0;j<a;j++)
+                try 
                 {
-                    e_a *= Taylor_Series_Decimal.Napier;
+                    for (uint j = 0; j < a; j++)
+                    {
+                        e_a *= Taylor_Series_Decimal.Napier;
+                    }
+                }
+                catch
+                {
+                    return decimal.MaxValue;
                 }
             }
             else
             {
-                for (uint j = 0; j < a; j++)
+                try
                 {
-                    e_a /= Taylor_Series_Decimal.Napier;
+                    for (uint j = 0; j < -a; j++)
+                    {
+                        e_a /= Taylor_Series_Decimal.Napier;
+                    }
                 }
+                catch 
+                {
+                    return 0m;
+                }  
             }
 
             decimal delta = input - a;
@@ -39,7 +55,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             decimal result = 1m + delta;
 
-            for (uint j = 2; j <= 10; j++)
+            for (uint j = 2; j <= 6; j++)
             {
                 numerator *= delta;
                 denominator *= j;
