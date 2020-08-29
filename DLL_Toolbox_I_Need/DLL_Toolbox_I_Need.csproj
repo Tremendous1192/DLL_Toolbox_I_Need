@@ -66,6 +66,11 @@
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_scalar.cs" />
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Combine.cs" />
     <Compile Include="Data_Processing_Application\Type_Changer\Type_Changer_string_Disassemble.cs" />
+    <Compile Include="Demonstration\Basics_of_Statistical_Data_Analysis\Basics_of_Statistical_Data_Analysis.cs" />
+    <Compile Include="Demonstration\Basics_of_Statistical_Data_Analysis\Basics_of_Statistical_Data_Analysis_example2_1.cs" />
+    <Compile Include="Demonstration\Basics_of_Statistical_Data_Analysis\Basics_of_Statistical_Data_Analysis_example2_2.cs" />
+    <Compile Include="Demonstration\Basics_of_Statistical_Data_Analysis\Basics_of_Statistical_Data_Analysis_exercise2_1.cs" />
+    <Compile Include="Demonstration\Basics_of_Statistical_Data_Analysis\Basics_of_Statistical_Data_Analysis_example2_3.cs" />
     <Compile Include="Demonstration\My_class\My_class_009.cs" />
     <Compile Include="Demonstration\My_class\My_class.cs" />
     <Compile Include="Demonstration\My_class\My_class_001.cs" />

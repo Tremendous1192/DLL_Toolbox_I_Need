@@ -12,7 +12,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
          (ref decimal result, ref decimal numerator, ref decimal denominator
               , ref decimal partition_function
               , uint calculation_count_epoch
-              , decimal[] initial_x
+              , decimal[] initial_x ,ref decimal[] final_x
               , IAction iaction, decimal[] step_half_width, uint[] seeds_for_step
               , uint seed_for_judge
               , IScalar iscalar
@@ -101,6 +101,11 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
             }
 
             result = numerator / denominator;
+
+            for (int j=0;j<initial_x.Length;j++)
+            {
+                final_x[j] = xs[j];
+            }
 
         }
 

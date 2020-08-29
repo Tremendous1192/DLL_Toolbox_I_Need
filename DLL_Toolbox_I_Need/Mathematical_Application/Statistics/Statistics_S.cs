@@ -109,10 +109,13 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
         /// [3,*] 平均値
         /// [4,*] 第三四分位数
         /// [5,*] 最大値
+        /// [6,*] 偏差平方和
+        /// [7,*] 標本分散
+        /// [8,*] 標本標準偏差
         /// </summary>
         /// <param name="design_Matrix"></param>
         /// <returns></returns>
-        public double[,] Summary(double[,] design_matrix)
+        public static double[,] Summary(double[,] design_matrix)
         {
 
             //並べ替え用の配列。
@@ -144,15 +147,18 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 }
             }
 
-            double[,] summary = new double[6, sorted.GetLength(1)];
-            //min and max
+
+            double[,] summary = new double[9, sorted.GetLength(1)];
+
+
+            //[0,*] 最小値 and [5,*] 最大値
             for (int k = 0; k < summary.GetLength(1); k++)
             {
                 summary[0, k] = sorted[0, k];
                 summary[5, k] = sorted[sorted.GetLength(0) - 1, k];
             }
 
-            //平均値
+            //[3,*] 平均値
             for (int k = 0; k < sorted.GetLength(1); k++)
             {
                 for (int j = 0; j < sorted.GetLength(0); j++)
@@ -162,9 +168,9 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 summary[3, k] /= sorted.GetLength(0);
             }
 
-            //中央値
+            //[2,*] 中央値
             int median_point = sorted.GetLength(0) / 2;
-            if (sorted.GetLength(0) % 1 == 0)
+            if (sorted.GetLength(0) % 2 == 0)
             {
                 for (int k = 0; k < sorted.GetLength(1); k++)
                 {
@@ -179,8 +185,8 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                 }
             }
 
-            //四分位数
-            //第3四分位数
+            //[1,*] 第一四分位数
+            //[4,*] 第三四分位数
             int lower_quartile_point = sorted.GetLength(0) / 4;
             int upper_quartile_point = Math.Max(sorted.GetLength(0) - sorted.GetLength(0) / 4, 0);
             if (sorted.GetLength(0) % 4 < 2)
@@ -200,6 +206,24 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
                     summary[4, k] = sorted[upper_quartile_point, k];
                 }
             }
+
+            //[6,*] 偏差平方和
+            for (int j = 0; j < design_matrix.GetLength(0); j++)
+            {
+                for (int k = 0; k < design_matrix.GetLength(1); k++)
+                {
+                    summary[6, k] += (design_matrix[j, k] - summary[3, k]) * (design_matrix[j, k] - summary[3, k]);
+                }
+            }
+
+            //[7,*] 標本分散
+            //[8,*] 標本標準偏差
+            for (int k = 0; k < design_matrix.GetLength(1); k++)
+            {
+                summary[7, k] = summary[6, k] / (design_matrix.GetLength(0) - 1);
+                summary[8, k] = Math.Sqrt(summary[7, k]);
+            }
+
 
             return summary;
         }

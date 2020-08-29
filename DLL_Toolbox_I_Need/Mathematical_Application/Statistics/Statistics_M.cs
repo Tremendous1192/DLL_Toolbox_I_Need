@@ -74,7 +74,7 @@ namespace DLL_Toolbox_I_Need.Mathematical_Application
 
             //中央値は、要素数を2で割ったときのあまりで計算が異なる。
             int median_point = sorted.GetLength(0) / 2;
-            if (sorted.GetLength(0) % 1 == 0)
+            if (sorted.GetLength(0) % 2 == 0)
             {
                 for (int k = 0; k < sorted.GetLength(1); k++)
                 {
